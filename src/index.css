@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.chat-window {
+    position: fixed;
+    height: 35%;
+    min-height: 300px;
+    width: 20%;
+    min-width: 250px;
+    bottom: 0.5%;
+    right: 5%;
+    border: solid 2px darkcyan;
+}
+
+.chat-window.folded {
+    height: 20px;
+    min-height: unset;
+}
+
+.chat-window.folded .top-bar{
+    height: 100%;
+}
+
+.bar {
+    height: 10%;
+    width: 100%;
+}
+
+.top-bar {
+    position: relative;
+    top: 0;
+    color: aliceblue;
+    background-color: darkcyan;
+    margin-bottom: 2px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.bottom-bar {
+    bottom: 0;
+}
+
+.chat-content {
+    position: relative;
+    height: 80%;
+    width: 100%;
+}
+
+.chat-messages {
+    position: relative;
+    width: 94%;
+    left: 3%;
+    height: 85%;
+    border: 1px dashed grey;
+    overflow: auto;
+}
+
+.chat-messages div {
+    display: flex;
+    left: 1px;
+    margin: 0 0 1px 4px;
+    font-size: 14px;
+    white-space: nowrap
+
+}
+
+.chat-window .input.message {
+    position: relative;
+    float: right;
+    height: 8%;
+    width: 92%;
+    right: 2%;
+    margin: 4px;
+}
+
+.chat-window .btn.send {
+    position: relative;
+    float: right;
+    right: 1%;
+    width: 25%;
+    margin: 4px;
+    background-color: darkcyan;
+}
+
+.chat-window .btn.clear {
+    position: relative;
+    float: left;
+    right: 1%;
+    width: 10%;
+    min-width: 40px;
+    margin: 4px;
+    font-size: 10px;
+    background-color: cadetblue;
+}
+
+.chat-window .btn.clear:hover, .btn.send:hover {
+    background-color: steelblue;
+}
+
+.chat-window .input.name {
+    position: relative;
+    float: right;
+    width: 30%;
+    margin: 4px;
+}
+
+.btn {
+    border-radius: 24px;
+    color: #ffffff;
+}
+
+button:focus {
+    outline: 0;
+}
