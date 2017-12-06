@@ -15,17 +15,31 @@ body {
     border: solid 2px darkcyan;
 }
 
+.chat-window.folded {
+    height: 20px;
+    min-height: unset;
+}
+
+.chat-window.folded .top-bar{
+    height: 100%;
+}
+
 .bar {
     height: 10%;
     width: 100%;
 }
 
-.bar-top {
+.top-bar {
     position: relative;
     top: 0;
+    color: aliceblue;
+    background-color: darkcyan;
+    margin-bottom: 2px;
+    vertical-align: middle;
+    cursor: pointer;
 }
 
-.bar-bottom {
+.bottom-bar {
     bottom: 0;
 }
 
@@ -41,19 +55,23 @@ body {
     left: 3%;
     height: 85%;
     border: 1px dashed grey;
-    overflow-y: scroll;
+    overflow: auto;
 }
 
-.chat-messages span {
-    display: block;
+.chat-messages div {
+    display: flex;
     left: 1px;
+    margin: 0 0 1px 4px;
+    font-size: 14px;
+    white-space: nowrap
+
 }
 
 .chat-window .input.message {
     position: relative;
     float: right;
     height: 8%;
-    width: 80%;
+    width: 92%;
     right: 2%;
     margin: 4px;
 }
@@ -64,6 +82,22 @@ body {
     right: 1%;
     width: 25%;
     margin: 4px;
+    background-color: darkcyan;
+}
+
+.chat-window .btn.clear {
+    position: relative;
+    float: left;
+    right: 1%;
+    width: 10%;
+    min-width: 40px;
+    margin: 4px;
+    font-size: 10px;
+    background-color: cadetblue;
+}
+
+.chat-window .btn.clear:hover, .btn.send:hover {
+    background-color: steelblue;
 }
 
 .chat-window .input.name {
@@ -71,4 +105,13 @@ body {
     float: right;
     width: 30%;
     margin: 4px;
+}
+
+.btn {
+    border-radius: 24px;
+    color: #ffffff;
+}
+
+button:focus {
+    outline: 0;
 }
